@@ -1,0 +1,29 @@
+baseURL = 'https://malinali-app.github.io/tokyma-website/'
+title = 'Tokyma'
+defaultContentLanguage = 'en'
+enableRobotsTXT = true
+summaryLength = 40
+paginate = 12
+disableKinds = ['taxonomy', 'term']
+relativeURLs = true
+
+[params]
+description = "Tokyma is a consultancy for machine translation and language technology, focused on low-resource and Global South languages."
+email = "hello@tokyma.io"
+github = "https://github.com/malinali-app/tokyma-website"
+malinali = "https://malinali.app/"
+malinaliGithub = "https://github.com/malinali-app/malinali-app"
+playstore = "https://play.google.com/store/apps/details?id=app.malinali.l10n&hl=en"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+
+[permalinks]
+notes = "/notes/:slug/"

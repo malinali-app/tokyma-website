@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="page-wrap">
+  <article class="content-wrapper">
+    <h1>{{ .Title }}</h1>
+    {{ if not .Date.IsZero }}
+    <p class="page-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+    </p>
+    {{ end }}
+    {{ with .Params.tags }}
+    <div class="tag-row">
+      {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}

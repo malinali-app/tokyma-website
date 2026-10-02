@@ -1,0 +1,16 @@
+<footer>
+  <div class="footer-content">
+    <p>&copy; {{ now.Year }} Tokyma. All rights reserved.</p>
+    <p class="footer-blurb">A consultancy for machine translation and language technology. We also edit <a href="{{ .Site.Params.malinali }}">Malinali</a>.</p>
+    <div class="footer-links">
+      <a href="{{ "work/" | relURL }}">Work</a>
+      <a href="{{ "notes/" | relURL }}">Notes</a>
+      <a href="{{ .Site.Params.malinali }}" target="_blank" rel="noopener noreferrer">Malinali</a>
+      <a href="{{ "privacy/" | relURL }}">Privacy</a>
+      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+    </div>
+    <div class="footer-contact">
+      <p><strong>Email:</strong> <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+    </div>
+  </div>
+</footer>

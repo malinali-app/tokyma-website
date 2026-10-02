@@ -1,0 +1,95 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-kicker">Consultancy · research · language technology</p>
+    <h1>Tokyma</h1>
+    <p class="lede">A consultancy for machine translation and language technology, with a focus on low-resource and Global South languages. We advise on data, models, and field practice. We also edit <a href="{{ .Site.Params.malinali }}">Malinali</a>, a small offline translation app — one outcome of the same work, not the whole of it.</p>
+    <div class="btn-group">
+      <a href="{{ "work/" | relURL }}" class="btn btn-primary">What we do</a>
+      <a href="{{ "notes/" | relURL }}" class="btn btn-secondary">Notes</a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="section-inner">
+    <h2>The industry is moving. The hard languages are still hard.</h2>
+    <p class="section-lead">In a few years, cloud translation and large language models have opened pairs that sat locked for decades. That is real progress. It is also easy to confuse a new dropdown, a demo, or a device SKU with a language that communities can actually use — offline, in confidence, in the orthography they write, in the register they speak.</p>
+    <p class="section-lead" style="margin-bottom:0">Tokyma sits with organisations that cannot wait for a vendor catalogue, and with researchers who already know the catalogue is not the same as a corpus. Consulting first: what exists, what is licensed, what is missing, and which tools are the right ones for the job.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner wide">
+    <h2>How we work</h2>
+    <p class="section-lead">The brief is usually smaller than a platform and larger than a model card.</p>
+    <div class="cards">
+      <article class="card">
+        <h3>Landscape and feasibility</h3>
+        <p>Which bitext, dictionaries, and speech already exist? Who collected them? An honest no is a deliverable.</p>
+      </article>
+      <article class="card">
+        <h3>Corpora and evaluation</h3>
+        <p>Alignment, register, leakage, hold-outs that are not shuffled liturgy. Scores that mean something on the street as well as on a test set.</p>
+      </article>
+      <article class="card">
+        <h3>Models into the field</h3>
+        <p>Fine-tunes, packaging, and the unglamorous path from a checkpoint to a device people will actually carry. When an app is the right surface, we edit Malinali.</p>
+      </article>
+      <article class="card">
+        <h3>Speech as evidence</h3>
+        <p>Oral languages do not become text because a paper needed a table. Collection and transcription have to work where the recording was made.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="section-inner">
+    <h2>Neighbours in the field</h2>
+    <p class="section-lead">Low-resource language technology is not empty. Much of the serious work is already being done by communities that do not appear in consumer catalogues.</p>
+    <div class="players">
+      <article class="player">
+        <h3>Masakhane NLP</h3>
+        <p>A grassroots research community for African languages, by Africans. Participatory MT, NER, QA, speech. <a href="https://www.masakhane.io/">masakhane.io</a></p>
+      </article>
+      <article class="player">
+        <h3>CLEAR Global / TWB</h3>
+        <p>Humanitarian language services and language-use data when a crisis does not happen in English. <a href="https://www.clearglobal.org/">clearglobal.org</a> · <a href="https://translatorswithoutborders.org/language-data-by-country/">language data by country</a></p>
+      </article>
+      <article class="player">
+        <h3>SIL Global</h3>
+        <p>Orthography, literacy, and speech resources in languages most benchmarks still skip. <a href="https://www.sil.org/">sil.org</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <h2>Notes</h2>
+    <p class="section-lead">Short essays on an industry that is changing quickly — coverage, corpora, and problems that were locked for years.</p>
+    <div class="notes-teaser">
+      {{ range first 4 (where .Site.RegularPages "Section" "notes") }}
+      <a class="note-row" href="{{ .RelPermalink }}">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        <div>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary | plainify | truncate 180 }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+    <p class="note" style="margin-top:1.5rem"><a href="{{ "notes/" | relURL }}">All notes →</a></p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>A language that is not in the catalogue is usually the starting point.</h2>
+  <p>We work with research labs, NGOs, and language communities on feasibility, corpora, and tooling. The first reply is a reading of the landscape.</p>
+  <div class="btn-group">
+    <a href="mailto:{{ .Site.Params.email }}" class="btn btn-primary">Start a conversation</a>
+    <a href="{{ "notes/" | relURL }}" class="btn btn-ghost">Read the notes</a>
+  </div>
+</section>
+{{ end }}

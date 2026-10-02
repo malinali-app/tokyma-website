@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="page-wrap">
+  <div class="content-wrapper">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}{{ . }}{{ end }}
+    <ul class="note-list">
+      {{ range .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          <p class="page-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time></p>
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Summary | plainify | truncate 220 }}</p>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

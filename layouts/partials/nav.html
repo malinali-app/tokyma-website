@@ -1,0 +1,14 @@
+<nav>
+  <div class="container">
+    <a href="{{ "/" | relURL }}" class="brand">
+      <img src="{{ "images/mark.svg" | relURL }}" alt="">
+      <span class="logo">Tokyma</span>
+    </a>
+    <div class="nav-links">
+      <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="active"{{ end }}>Home</a>
+      <a href="{{ "work/" | relURL }}"{{ if in .RelPermalink "/work/" }} class="active"{{ end }}>Work</a>
+      <a href="{{ "notes/" | relURL }}"{{ if in .RelPermalink "/notes/" }} class="active"{{ end }}>Notes</a>
+      <a href="{{ .Site.Params.malinali }}" class="ext" target="_blank" rel="noopener noreferrer">Malinali</a>
+    </div>
+  </div>
+</nav>
