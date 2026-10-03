@@ -1,6 +1,6 @@
 ---
 title: "Work"
-description: "Tokyma is a consultancy for machine translation and language technology, focused on low-resource and Global South languages."
+description: "Consulting, corpora, and models for low-resource and Global South languages."
 ---
 
 Tokyma is a consultancy. We help research labs, NGOs, and language communities decide what is feasible, what data already exists, and which tools belong on a given pair. We also edit [Malinali](https://malinali.app/), a small offline translation app. The app is one place the advice becomes software. It is not the whole practice.

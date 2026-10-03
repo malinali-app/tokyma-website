@@ -1,7 +1,7 @@
 ---
 title: "Privacy"
 slug: privacy
-description: "Tokyma website privacy note."
+description: "Tokyma website privacy note: no analytics, no cookies, and no personal data collected on these pages."
 ---
 
 This website is a static site. We do not run analytics, set cookies, or collect personal data through these pages.

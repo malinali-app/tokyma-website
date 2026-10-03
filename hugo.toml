@@ -1,11 +1,10 @@
-baseURL = 'https://malinali-app.github.io/tokyma-website/'
+baseURL = 'https://tokyma.io/'
 title = 'Tokyma'
 defaultContentLanguage = 'en'
 enableRobotsTXT = true
 summaryLength = 40
 paginate = 12
 disableKinds = ['taxonomy', 'term']
-relativeURLs = true
 
 [params]
 description = "Tokyma is a consultancy for machine translation and language technology, focused on low-resource and Global South languages."

@@ -12,11 +12,7 @@ Install [Hugo Extended](https://gohugo.io/installation/), then:
 hugo server
 ```
 
-Open http://localhost:1313/tokyma-website/ (the `baseURL` matches GitHub Pages). For a root-local preview:
-
-```powershell
-hugo server --baseURL=http://localhost:1313/ --appendPort
-```
+Open http://localhost:1313/. Production canonical URLs use https://tokyma.io/.
 
 ## Build
 
